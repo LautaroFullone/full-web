@@ -1,0 +1,199 @@
+.landing-container #footer {
+   font-size: 14px;
+   /* background: var(--primary-color); */
+}
+
+.landing-container #footer .footer-newsletter {
+   padding: 50px 0;
+   background: var(--gray-background-color);
+   text-align: center;
+   font-size: 15px;
+   color: #444444;
+}
+
+.landing-container #footer .footer-newsletter h4 {
+   font-size: 24px;
+   margin: 0 0 20px 0;
+   padding: 0;
+   line-height: 1;
+   font-weight: 600;
+   color: var(--primary-color);
+}
+
+.landing-container #footer .footer-newsletter form {
+   margin-top: 30px;
+   background: #fff;
+   padding: 6px 10px;
+   position: relative;
+   border-radius: 50px;
+   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.06);
+   text-align: left;
+}
+
+.landing-container #footer .footer-newsletter form input[type=email] {
+   border: 0;
+   padding: 4px 8px;
+   width: calc(100% - 100px);
+}
+
+.landing-container #footer .footer-newsletter form input[type=submit] {
+   position: absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   border: 0;
+   background: none;
+   font-size: 16px;
+   padding: 0 20px;
+   background: var(--secondary-color);
+   color: #fff;
+   transition: 0.3s;
+   border-radius: 50px;
+   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.landing-container #footer .footer-newsletter form input[type=submit]:hover {
+   background: var(--tertiary-color);
+}
+
+.landing-container #footer .footer-top {
+   padding: 60px 0 30px 0;
+   background: var(--gray-background-color);
+}
+
+.landing-container #footer .footer-top .footer-contact {
+   margin-bottom: 30px;
+}
+
+.landing-container #footer .footer-top .footer-contact h3 {
+   font-size: 28px;
+   margin: 0 0 10px 0;
+   padding: 2px 0 2px 0;
+   line-height: 1;
+   text-transform: uppercase;
+   font-weight: 600;
+   color: var(--primary-color);
+}
+
+.landing-container #footer .footer-top .footer-contact p {
+   font-size: 14px;
+   line-height: 24px;
+   margin-bottom: 0;
+   font-family: "Jost", sans-serif;
+   color: #5e5e5e;
+}
+
+.landing-container #footer .footer-top h4 {
+   font-size: 16px;
+   font-weight: bold;
+   color: var(--primary-color);
+   position: relative;
+   padding-bottom: 12px;
+}
+
+.landing-container #footer .footer-top .footer-links {
+   margin-bottom: 30px;
+}
+
+.landing-container #footer .footer-top .footer-links ul {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+}
+
+.landing-container #footer .footer-top .footer-links ul i {
+   padding-right: 2px;
+   color: var(--secondary-color);
+   font-size: 18px;
+   line-height: 1;
+}
+
+.landing-container #footer .footer-top .footer-links ul li {
+   padding: 10px 0;
+   display: flex;
+   align-items: center;
+}
+
+.landing-container #footer .footer-top .footer-links ul li:first-child {
+   padding-top: 0;
+}
+
+.landing-container #footer .footer-top .footer-links ul a {
+   color: #777777;
+   transition: 0.3s;
+   display: inline-block;
+   line-height: 1;
+   cursor: pointer;
+}
+
+.landing-container #footer .footer-top .footer-links p {
+   color: #777777;
+}
+
+.landing-container #footer .footer-top .footer-links ul a:hover {
+   text-decoration: none;
+   color: var(--secondary-color);
+}
+
+.landing-container #footer .footer-top .social-links a {
+   font-size: 18px;
+   display: inline-block;
+   background: var(--secondary-color);
+   color: #fff;
+   line-height: 1;
+   padding: 8px 0;
+   margin-right: 4px;
+   border-radius: 50%;
+   text-align: center;
+   width: 36px;
+   height: 36px;
+   transition: 0.3s;
+}
+
+.landing-container #footer .footer-top .social-links a:hover {
+   background: var(--tertiary-color);
+   color: #fff;
+   text-decoration: none;
+}
+
+.landing-container #footer .footer-bottom {
+   padding: 20px 0;
+   color: #fff;
+   background-color: var(--primary-color);
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+}
+
+.landing-container #footer .copyright {
+   float: left;
+}
+
+.landing-container #footer .credits {
+   float: right;
+   font-size: 13px;
+   padding-top: 5px;
+   text-align: center;
+}
+
+.landing-container #footer .credits a {
+   transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+   .landing-container #footer .footer-bottom {
+       padding-top: 20px;
+       padding-bottom: 20px;
+   }
+
+   .landing-container #footer .copyright,
+   .landing-container #footer .credits {
+       text-align: center;
+       float: none;
+   }
+
+   .landing-container #footer .credits {
+       padding-top: 4px;
+   }
+}

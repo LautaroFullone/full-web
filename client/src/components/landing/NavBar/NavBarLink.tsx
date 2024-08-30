@@ -1,5 +1,5 @@
-import { SectionType } from 'models';
-import ButtonLanding from './ButtonLanding';
+import type { SectionType } from 'models';
+import ButtonLanding from '../ButtonLanding';
 
 interface NavBarLinkProps {
    label: string;
@@ -9,28 +9,23 @@ interface NavBarLinkProps {
    goTo: (section: SectionType) => void;
 }
 
-export default function NavBarLink({
-   label,
-   sectionId,
-   activeLink,
-   isButton = false,
-   goTo,
-}: NavBarLinkProps) {
+export default function NavBarLink({ label, sectionId, activeLink, isButton = false, goTo }: NavBarLinkProps) {
    return (
       <li>
          {isButton ? (
-            <div className='d-flex justify-content-center'>
+            <div className="d-flex justify-content-center">
                <ButtonLanding
                   actionClick={() => goTo(sectionId)}
                   isActive={activeLink === sectionId}
                   label={label}
-                  className='nav-btn'
+                  className="nav-btn"
                />
             </div>
          ) : (
             <span
                onClick={() => goTo(sectionId)}
-               className={`nav-link scrollto ${activeLink === sectionId ? 'active' : ''}`}>
+               className={`nav-link scrollto ${activeLink === sectionId ? 'active' : ''}`}
+            >
                {label}
             </span>
          )}

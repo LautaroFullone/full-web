@@ -1,15 +1,14 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import LandingPage from './pages/LandingPage';
 import LandingLayout from './layouts/LandingLayout';
-
-const a = 'pepe';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { DetailUnitPage, LandingPage } from '@/pages';
 
 function App() {
    return (
       <BrowserRouter>
          <Routes>
             <Route element={<LandingLayout />}>
-               <Route path='/' element={<LandingPage />} index />
+               <Route path="/" element={<LandingPage />} index />
+               <Route path="/unit" element={<DetailUnitPage />} />
             </Route>
          </Routes>
       </BrowserRouter>

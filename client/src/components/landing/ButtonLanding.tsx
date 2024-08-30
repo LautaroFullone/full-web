@@ -1,28 +1,33 @@
 interface ButtonLandingProps {
-   label: string
-   actionClick: any
-   className?: string
-   isActive?: boolean
-   borderWhite?: boolean
-   size?: 'sm' | 'md' | 'lg'
+   label: string;
+   actionClick: () => void;
+   className?: string;
+   isActive?: boolean;
+   borderWhite?: boolean;
+   size?: 'sm' | 'md' | 'lg';
 }
-export default function ButtonLanding({
+
+const ButtonLanding: React.FC<ButtonLandingProps> = ({
    label,
    actionClick,
    className = '',
-   isActive,
+   isActive = false,
    borderWhite = false,
    size = 'md',
-}: ButtonLandingProps) {
+}) => {
    return (
       <button
+         type="button"
+         onClick={actionClick}
          className={`secondary-btn 
 				${isActive ? 'active' : ''} 
 				${borderWhite ? ' borderWhite' : ''} 
 				${size === 'lg' ? ' large-btn' : ''}  
 				${className}`}
-         onClick={actionClick}>
+      >
          {label}
       </button>
-   )
-}
+   );
+};
+
+export default ButtonLanding;
