@@ -9,6 +9,7 @@
       "paths": {
          "@/components/*": ["components/*"],
          "@/layouts/*": ["layouts/*"],
+         "@/pages/*": ["pages/*"], //not working
          "@/services/*": ["services/*"],
          "@/hooks/*": ["hooks/*"],
          "@/utils/*": ["utils/*"]

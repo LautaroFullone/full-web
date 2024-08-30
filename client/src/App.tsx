@@ -1,6 +1,6 @@
-import LandingLayout from './layouts/LandingLayout';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { DetailUnitPage, LandingPage } from '@/pages';
+import LandingLayout from './layouts/LandingLayout'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { DetailUnitPage, LandingPage } from './pages'
 
 function App() {
    return (
@@ -12,7 +12,7 @@ function App() {
             </Route>
          </Routes>
       </BrowserRouter>
-   );
+   )
 }
 
-export default App;
+export default App
