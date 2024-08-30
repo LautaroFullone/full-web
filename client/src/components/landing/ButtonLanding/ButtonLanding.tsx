@@ -1,5 +1,6 @@
+import './ButtonLanding.css'
+
 interface ButtonLandingProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-   label: string
    actionClick: () => void
    className?: string
    isActive?: boolean
