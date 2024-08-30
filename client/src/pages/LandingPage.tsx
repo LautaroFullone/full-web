@@ -1,3 +1,11 @@
+import AboutSection from '@/components/landing/AboutSection.tsx/AboutSection'
+import BannerSection from '@/components/landing/BannerSection/BannerSection'
+
 export default function LandingPage() {
-   return <h1 className="text-4xl text-blue-500">Landing Page</h1>
+   return (
+      <>
+         <BannerSection />
+         <AboutSection />
+      </>
+   )
 }
