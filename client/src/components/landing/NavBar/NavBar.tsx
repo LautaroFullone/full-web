@@ -1,14 +1,14 @@
-import { scrollTo } from '@/utils/scrollTo';
-import { SectionType } from 'models';
-import { useEffect, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import NavBarLink from './NavBarLink';
+import { scrollTo } from '@/utils/scrollTo'
+import { SectionType } from 'models'
+import { useEffect, useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
+import NavBarLink from './NavBarLink'
 import './NavBar.css'
 
 interface NavBarLinkType {
-   label: string;
-   sectionId: SectionType;
-   isButton: boolean;
+   label: string
+   sectionId: SectionType
+   isButton: boolean
 }
 
 const navBarData: NavBarLinkType[] = [
@@ -42,43 +42,42 @@ const navBarData: NavBarLinkType[] = [
       sectionId: 'contact',
       isButton: true,
    },
-];
+]
 
 export default function NavBar() {
-   const location = useLocation();
-   const [activeLink, setActiveLink] = useState<string>('banner');
+   const location = useLocation()
+   const [activeLink, setActiveLink] = useState<string>('banner')
 
    function handleLinkClick(navLink: SectionType) {
       if (location.pathname === '/' && navLink) {
-         const navbar = document.querySelector('#navbar');
+         const navbar = document.querySelector('#navbar')
 
          if (navbar?.classList.contains('navbar-mobile')) {
-            navbar.classList.remove('navbar-mobile');
+            navbar.classList.remove('navbar-mobile')
 
-            const navbarToggle = document.querySelector('.mobile-nav-toggle')!;
-            navbarToggle.classList.toggle('bi-list');
-            navbarToggle.classList.toggle('bi-x');
+            const navbarToggle = document.querySelector('.mobile-nav-toggle')!
+            navbarToggle.classList.toggle('bi-list')
+            navbarToggle.classList.toggle('bi-x')
          }
-         scrollTo(navLink);
+         scrollTo(navLink)
       }
    }
 
    function handleMobileNavClick() {
-      const mobileNavBarButton = document.querySelector('.mobile-nav-toggle')!;
-      document.querySelector('#navbar')!.classList.toggle('navbar-mobile');
-      mobileNavBarButton.classList.toggle('bi-list');
-      mobileNavBarButton.classList.toggle('bi-x');
+      const mobileNavBarButton = document.querySelector('.mobile-nav-toggle')!
+      document.querySelector('#navbar')!.classList.toggle('navbar-mobile')
+      mobileNavBarButton.classList.toggle('bi-list')
+      mobileNavBarButton.classList.toggle('bi-x')
    }
 
    function navbarlinksActive() {
-      const sections = [...document.querySelectorAll('section')];
+      const sections = [...document.querySelectorAll('section')]
 
-      const position = window.scrollY + 200;
+      const position = window.scrollY + 200
 
       sections.forEach((section) => {
-         if (position >= section.offsetTop && position <= section.offsetTop + section.offsetHeight)
-            setActiveLink(section.id);
-      });
+         if (position >= section.offsetTop && position <= section.offsetTop + section.offsetHeight) setActiveLink(section.id)
+      })
    }
 
    useEffect(() => {
@@ -87,19 +86,17 @@ export default function NavBar() {
 
          window.addEventListener('load', navbarlinksActive)
          document.addEventListener('scroll', navbarlinksActive)
-      } 
-      else if(location.pathname.includes('marca')){
+      } else if (location.pathname.includes('marca')) {
          setActiveLink('brands')
-      }
-      else if (location.pathname.includes('unidad')){
+      } else if (location.pathname.includes('unidad')) {
          setActiveLink('gallery')
-      } 
+      }
 
       return () => {
          window.removeEventListener('load', navbarlinksActive)
          document.removeEventListener('scroll', navbarlinksActive)
-      };
-   }, [location]);
+      }
+   }, [location])
 
    return (
       <header id="header" className="fixed-top header-inner-pages">
@@ -121,5 +118,5 @@ export default function NavBar() {
             </nav>
          </div>
       </header>
-   );
+   )
 }
