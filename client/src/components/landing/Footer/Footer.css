@@ -1,6 +1,6 @@
 .landing-container #footer {
    font-size: 14px;
-   /* background: var(--primary-color); */
+   background: var(--primary-color);
 }
 
 .landing-container #footer .footer-newsletter {
