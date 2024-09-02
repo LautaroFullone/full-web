@@ -1,0 +1,9 @@
+.landing-container .faq .faq-list {
+   padding: 0 100px;
+}
+
+@media (max-width: 1200px) {
+   .landing-container .faq .faq-list {
+       padding: 0;
+   }
+}

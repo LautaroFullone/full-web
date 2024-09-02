@@ -21,23 +21,37 @@ export default function BannerSection() {
                   data-aos="fade-up"
                   data-aos-delay="200"
                >
-                  <h1 className="d-none">El Ciprés 9 de Julio</h1>
-                  <h1>Implementos Agrícolas y Viales</h1>
-                  <h2>Tenemos lo que usted y el campo necesita</h2>
+                  <h1 className="d-none">FullWeb</h1>
+                  <h1>TITULO DE LA PÁGINA</h1>
+                  <h2>SUBTITULO DE LA SECCIÓN</h2>
 
                   <div className="d-flex justify-content-center justify-content-lg-start">
-                     <ButtonLanding actionClick={() => scrollTo('about')} isActive={true} className="aboutButton" size="lg">
-                        Sobre Nosotros
+                     <ButtonLanding
+                        actionClick={() => scrollTo('about')}
+                        isActive={true}
+                        className="aboutButton"
+                        size="lg"
+                     >
+                        SOBRE NOSOTROS
                      </ButtonLanding>
 
                      <a href={ytLink} className="glightbox btn-watch-video">
-                        <i className="bi bi-play-circle"></i>Video Promocional
+                        <i className="bi bi-play-circle"></i>VIDEO PROMOCIONAL
                      </a>
                   </div>
                </div>
 
-               <div className="col-lg-6 order-1 order-lg-2 banner-img" data-aos="zoom-in" data-aos-delay="200">
-                  <img src={`full-web-logo.png`} className="img-fluid rounded" rel="preload" alt="" />
+               <div
+                  className="col-lg-6 order-1 order-lg-2 banner-img"
+                  data-aos="zoom-in"
+                  data-aos-delay="200"
+               >
+                  <img
+                     src={`full-web-logo.png`}
+                     className="img-fluid rounded"
+                     rel="preload"
+                     alt=""
+                  />
                </div>
             </div>
          </div>

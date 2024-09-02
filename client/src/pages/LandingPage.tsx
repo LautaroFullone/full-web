@@ -1,11 +1,17 @@
-import AboutSection from '@/components/landing/AboutSection.tsx/AboutSection'
-import BannerSection from '@/components/landing/BannerSection/BannerSection'
+import {
+   AboutSection,
+   BannerSection,
+   CardsGallery,
+   FaqSection,
+} from '@/components/landing'
 
 export default function LandingPage() {
    return (
       <>
          <BannerSection />
          <AboutSection />
+         <CardsGallery />
+         <FaqSection />
       </>
    )
 }

@@ -1,5 +1,6 @@
 import { scrollTo } from '@/utils/scrollTo'
 import { useEffect, useRef } from 'react'
+import './BackToTopButton.css'
 
 export default function BackToTopButton() {
    const backToTopRef = useRef(null)
@@ -20,7 +21,11 @@ export default function BackToTopButton() {
    }, [])
 
    return (
-      <a ref={backToTopRef} className="back-to-top d-flex align-items-center justify-content-center" onClick={() => scrollTo('top')}>
+      <a
+         ref={backToTopRef}
+         className="back-to-top d-flex align-items-center justify-content-center"
+         onClick={() => scrollTo('top')}
+      >
          <i className="bi bi-arrow-up-short" />
       </a>
    )

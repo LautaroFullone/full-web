@@ -1,0 +1,4 @@
+div .scrolleable{
+   overflow-x: unset;
+   padding: 25px 20px;
+}
