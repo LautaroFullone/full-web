@@ -14,21 +14,13 @@ export default function FaqItem({ question, answer, delay }: FaqItemProps) {
       <li data-aos="fade-up" data-aos-delay={delay.toString()}>
          <HelpOutlineIcon className="icon-help" />
 
-         <a
-            data-bs-toggle="collapse"
-            className="collapsed"
-            data-bs-target={`#faq-list-${delay}`}
-         >
+         <a data-bs-toggle="collapse" className="collapsed" data-bs-target={`#faq-list-${delay}`}>
             {question}
             <KeyboardArrowDownIcon className="icon-show" />
             <KeyboardArrowUpIcon className="icon-close" />
          </a>
 
-         <div
-            id={`faq-list-${delay}`}
-            className="collapse"
-            data-bs-parent=".faq-list"
-         >
+         <div id={`faq-list-${delay}`} className="collapse" data-bs-parent=".faq-list">
             <p>{answer}</p>
          </div>
       </li>

@@ -3,6 +3,7 @@ import {
    BannerSection,
    CardsGallery,
    FaqSection,
+   GallerySection,
 } from '@/components/landing'
 
 export default function LandingPage() {
@@ -12,6 +13,7 @@ export default function LandingPage() {
          <AboutSection />
          <CardsGallery />
          <FaqSection />
+         <GallerySection />
       </>
    )
 }
